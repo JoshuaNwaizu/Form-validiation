@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Syncopate", sans-serif;
+  overflow-x: hidden;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
   font-weight: 500;
 }

@@ -12,7 +12,7 @@ const CreditCard = () => {
           alt="The back of a credit card"
           className="w-3/4 h-2/4 pt-9 translate-x-20"
         />
-        <p className=" absolute top-[6.7rem] right-16 mb-3 font-bold text-slate-100">
+        <p className=" absolute top-[6.85rem] right-16 mb-3 font-bold text-slate-100">
           000
         </p>
       </div>
@@ -22,17 +22,13 @@ const CreditCard = () => {
           alt="Front of a credit card"
           className="w-3/4 -translate-y-16 translate-x-5"
         />
-        <div className="-translate-y-52 flex flex-col gap-9">
-          <img src={cardLogo} alt="" className="ml-11 w-16" />
-          <div className="flex flex-col translate-x-9 gap-2">
-            <p className="flex flex-row gap-2 ml-3 text-slate-100 font-semibold">
-              {" "}
-              <span>0000</span>
-              <span>0000</span>
-              <span>0000</span>
-              <span>0000</span>{" "}
+        <div className="-translate-y-52 flex flex-col gap-8">
+          <img src={cardLogo} alt="" className="ml-10 w-14" />
+          <div className="flex flex-col translate-x-9 gap-4">
+            <p className="flex flex-row gap-2 ml-3 text-slate-100 font-bold text-xl tracking-wider">
+              0000 0000 0000 0000{" "}
             </p>
-            <p className="flex flex-row gap-24 text-slate-200 ml-2 text-[0.7rem] font-semibold">
+            <p className="flex flex-row uppercase tracking-wider gap-32 text-slate-200 ml-2 text-[0.8rem] font-semibold">
               <span>Joshua Chris</span> <span>00/00</span>
             </p>
           </div>
