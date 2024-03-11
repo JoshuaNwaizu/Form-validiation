@@ -10,7 +10,7 @@ const CreditCard = () => {
         <img
           src={cardBackground}
           alt="The back of a credit card"
-          className="w-3/4 pt-9 translate-x-20 h-auto"
+          className="w-3/4 h-2/4 pt-9 translate-x-20"
         />
         <p className=" absolute top-[6.7rem] right-16 mb-3 font-bold text-slate-100">
           000
@@ -22,7 +22,7 @@ const CreditCard = () => {
           alt="Front of a credit card"
           className="w-3/4 -translate-y-16 translate-x-5"
         />
-        <div className="-translate-y-52 flex flex-col gap-8">
+        <div className="-translate-y-52 flex flex-col gap-9">
           <img src={cardLogo} alt="" className="ml-11 w-16" />
           <div className="flex flex-col translate-x-9 gap-2">
             <p className="flex flex-row gap-2 ml-3 text-slate-100 font-semibold">
