@@ -6,36 +6,49 @@ import Button from "./Button";
 const classes =
   " p-1 border-2 text-stone-600 border-stone-500 py-3 px-4 rounded-xl focus:outline-none focus:border-stone-600";
 
-const Form = () => {
-  const [nameCard, setNameCard] = useState("");
-
-  const cardName = useRef();
-  const cardNumber = useRef();
-
-  const handleSave = () => {
-    const theCardName = cardName.current.value;
-    const theCardNumber = cardNumber.current.value;
-    if (theCardName.trim() === "" || theCardNumber.trim() === "") {
-      <p>No name</p>;
-    }
-  };
+const Form = ({
+  onChange,
+  value,
+  onChangeNumber,
+  onChangeNumVal,
+  onClick,
+  year,
+  handleYear,
+  month,
+  handleMonth,
+  handleCvc,
+  save,
+}) => {
   return (
     <div className="mt-24 ml-7 flex flex-col gap-6 mr-7">
       <Inputs
         label="Cardholder name"
         placeholder="e.g. Joshua Chris"
         className={classes}
-        ref={cardName}
+        value={value}
+        onChange={onChange}
       />
+
       <Inputs
         label="Card number"
         placeholder="e.g. 1234 5678 9123 0000"
+        maxLength="19"
         className={classes}
-        ref={cardNumber}
+        value={onChangeNumVal}
+        onChange={onChangeNumber}
       />
+
       <div className="">
-        <DateInputs className={classes} label="exp. date(MM/YY)" />
-        <Button onClick={handleSave} />
+        <DateInputs
+          className={classes}
+          label="exp. date(MM/YY)"
+          year={year}
+          month={month}
+          handleYear={handleYear}
+          handleMonth={handleMonth}
+          handleCvc={handleCvc}
+        />
+        <Button onClick={onClick} name="Confirm" />
       </div>
 
       <div></div>

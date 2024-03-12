@@ -3,7 +3,15 @@ import Inputs from "./Inputs";
 const classes =
   "w-full p-1 border-2 text-stone-600 border-stone-500 py-3 px-4 rounded-xl focus:outline-none focus:border-stone-600";
 
-const DateInputs = ({ label }) => {
+const DateInputs = ({
+  label,
+  value,
+  month,
+  year,
+  handleYear,
+  handleMonth,
+  handleCvc,
+}) => {
   return (
     <div className="flex flex-row ">
       <div className="flex flex-col gap-2 w-full">
@@ -14,8 +22,10 @@ const DateInputs = ({ label }) => {
             placeholder="MM"
             autoComplete="off"
             maxLength="2"
+            value={month}
             required
             className={classes}
+            onChange={handleMonth}
           />
           <input
             type="text"
@@ -23,7 +33,9 @@ const DateInputs = ({ label }) => {
             autoComplete="off"
             maxLength="2"
             required
+            value={year}
             className={classes}
+            onChange={handleYear}
           />
         </div>
       </div>
@@ -32,6 +44,7 @@ const DateInputs = ({ label }) => {
         placeholder="e.g. 123"
         className="w-full p-1 border-2 text-stone-600 border-stone-500 py-3 px-5 rounded-xl focus:outline-none focus:border-stone-600"
         maxLength="3"
+        onChange={handleCvc}
       />
     </div>
   );

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import cardBackground from "./assets/bg-card-back.png";
 import cardFront from "./assets/bg-card-front.png";
 import cardLogo from "./assets/card-logo.svg";
 
-const CreditCard = () => {
+const CreditCard = ({ name, number, save, year, month, cvc }) => {
   return (
     <div className="bg-[url('src/assets/bg-main-mobile.png')] h-64 bg-no-repeat bg-cover">
       <div>
@@ -12,24 +12,28 @@ const CreditCard = () => {
           alt="The back of a credit card"
           className="w-3/4 h-2/4 pt-9 translate-x-20"
         />
-        <p className=" absolute top-[6.85rem] right-16 mb-3 font-bold text-slate-100">
-          000
+        <p className="  font-bold translate-x-80 -translate-y-24  text-slate-100">
+          {save ? cvc : "XXX"}
         </p>
       </div>
       <div>
         <img
           src={cardFront}
           alt="Front of a credit card"
-          className="w-3/4 -translate-y-16 translate-x-5"
+          className="w-3/4 -translate-y-20 translate-x-5"
         />
-        <div className="-translate-y-52 flex flex-col gap-8">
+        <div className="-translate-y-56 flex flex-col gap-8">
           <img src={cardLogo} alt="" className="ml-10 w-14" />
           <div className="flex flex-col translate-x-9 gap-4">
             <p className="flex flex-row gap-2 ml-3 text-slate-100 font-bold text-xl tracking-wider">
-              0000 0000 0000 0000{" "}
+              {save ? number : "XXXX XXXX XXXX XXXX"}{" "}
             </p>
-            <p className="flex flex-row uppercase tracking-wider gap-32 text-slate-200 ml-2 text-[0.8rem] font-semibold">
-              <span>Joshua Chris</span> <span>00/00</span>
+
+            <p className="flex flex-row uppercase tracking-wider gap-28 text-slate-200 ml-2 text-[0.8rem] font-semibold">
+              <span>{save ? name : "Joshua Chris"}</span>{" "}
+              <span>
+                {save ? month : "XX"}/{save ? year : "XX"}
+              </span>
             </p>
           </div>
         </div>
