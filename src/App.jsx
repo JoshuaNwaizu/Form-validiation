@@ -21,7 +21,7 @@ function App() {
       cvc.trim() === ""
     ) {
       setSave(false);
-      setValidiationMessage("Invalid input, Enter a valid input");
+      setValidiationMessage("Invalid input,please Enter a valid input");
       return;
     } else {
       setSave(true);
