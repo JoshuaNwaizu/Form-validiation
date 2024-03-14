@@ -30,7 +30,7 @@ const CreditCard = ({ name, number, save, year, month, cvc }) => {
             </p>
 
             <p className="flex flex-row uppercase tracking-wider gap-28 text-slate-200 ml-2 text-[0.8rem] font-semibold">
-              <span>{save ? name : "Joshua Chris"}</span>{" "}
+              <span>{save ? name : "Felicia Leire"}</span>{" "}
               <span>
                 {save ? month : "XX"}/{save ? year : "XX"}
               </span>
