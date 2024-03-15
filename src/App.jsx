@@ -34,7 +34,7 @@ function App() {
       setSave(false);
       toast.error("Card Number is empty", { position: "top-right" });
       return;
-    } else if (number.trim().length < 16) {
+    } else if (number.trim().length < 17) {
       setSave(false);
       toast.error("Card Number is not complete", { position: "top-right" });
       return;

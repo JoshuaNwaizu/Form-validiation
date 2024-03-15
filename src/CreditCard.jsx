@@ -13,7 +13,7 @@ const CreditCard = ({
   validiationMessage,
 }) => {
   return (
-    <div className="bg-[url('src/assets/bg-main-mobile.png')] h-64 bg-no-repeat bg-cover max-[320px]:h-56">
+    <div className="bg-[url('./assets/bg-main-mobile.png')] h-64 bg-no-repeat bg-cover max-[320px]:h-56">
       <div>
         <img
           src={cardBackground}
