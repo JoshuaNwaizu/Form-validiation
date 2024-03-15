@@ -16,31 +16,32 @@ function App() {
   const [validiationMessage, setValidiationMessage] = useState("");
 
   const handleSave = () => {
-    const inputString = "abcXYZ";
     const regex = /\d/;
     if (name.trim() === "") {
-      setValidiationMessage("Input field is empty!");
+      setValidiationMessage("Please fill all Inputs!");
       setSave(false);
-      toast.error("Input field is empty", { position: "top-right" });
-      setValidiationMessage("Invalid input,please enter a valid input");
+      toast.error("Input field is empty!", { position: "top-right" });
       return;
     } else if (regex.test(name)) {
-      setValidiationMessage("Wrong format, letters only");
+      setValidiationMessage("CARDHOLDER NAME - Wrong format, letters only!");
       setSave(false);
-      toast.error("Wrong format, letters onlyt", { position: "top-right" });
-      setValidiationMessage("Invalid input,please enter a valid input");
+      toast.error("CARD NAME - Wrong format, letters only!", {
+        position: "top-right",
+      });
       return;
     }
-
-    if (
-      number.trim() === "" ||
-      month.trim() === "" ||
-      year.trim() === "" ||
-      cvc.trim() === ""
-    ) {
+    if (number.trim() === "") {
       setSave(false);
-      toast.error("Please fill in valid input", { position: "top-right" });
-      setValidiationMessage("Invalid input,please enter a valid input");
+      toast.error("Card Number is empty", { position: "top-right" });
+      return;
+    } else if (number.trim().length < 16) {
+      setSave(false);
+      toast.error("Card Number is not complete", { position: "top-right" });
+      return;
+    }
+    if (month.trim() === "" || year.trim() === "" || cvc.trim() === "") {
+      setSave(false);
+      toast.error("Please fill all input", { position: "top-right" });
       return;
     } else {
       setSave(true);
@@ -92,6 +93,7 @@ function App() {
           month={month}
           save={save}
           cvc={cvc}
+          validiationMessage={validiationMessage}
         />
 
         {save ? (
@@ -109,7 +111,6 @@ function App() {
             month={month}
             cvc={cvc}
             handleCvc={handleChangeCvc}
-            save={save}
             validiationMessage={validiationMessage}
           />
         )}

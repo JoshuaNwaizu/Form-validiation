@@ -9,7 +9,7 @@ const Compliment = ({ onClick }) => {
         <img src={iconComplete} alt="check" />
         <div className="flex flex-col items-center gap-3">
           <h1 className="uppercase text-3xl tracking-widest">Thank You!</h1>
-          <p className="text-stone-500">We've added your card details</p>
+          <p className="text-stone-500">We've added your card details.</p>
         </div>
       </div>
       <div className="mx-7">

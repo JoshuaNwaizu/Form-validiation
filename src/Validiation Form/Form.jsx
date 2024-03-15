@@ -17,16 +17,18 @@ const Form = ({
   month,
   handleMonth,
   handleCvc,
-  save,
+  validiationMessage,
 }) => {
   return (
-    <div className="mt-24 ml-7 flex flex-col gap-6 mr-7">
+    <div className="mt-24 ml-7 flex flex-col gap-6 mr-7 max-[320px]:mt-20">
       <Inputs
         label="Cardholder name"
         placeholder="e.g. Felicia Leire"
         className={classes}
         value={value}
         onChange={onChange}
+        validiationMessage={validiationMessage}
+        name={value}
       />
 
       <Inputs
@@ -35,6 +37,7 @@ const Form = ({
         maxLength="19"
         className={classes}
         value={onChangeNumVal}
+        validiationMessage={validiationMessage}
         onChange={onChangeNumber}
       />
 

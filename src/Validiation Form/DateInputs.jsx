@@ -13,7 +13,7 @@ const DateInputs = ({
   handleCvc,
 }) => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row max-[320px]:flex-col max-[320px]:gap-2">
       <div className="flex flex-col gap-2 w-full">
         <label className="uppercase tracking-widest text-sm">{label}</label>
         <div className="flex flex-row gap-3 w-3/4">
