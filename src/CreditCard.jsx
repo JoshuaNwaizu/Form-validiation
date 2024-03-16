@@ -20,7 +20,7 @@ const CreditCard = ({
           alt="The back of a credit card"
           className="w-3/4 h-2/4 pt-9 translate-x-20 max-[320px]:translate-x-16"
         />
-        <p className="font-bold translate-x-80 -translate-y-24  text-slate-100  max-[320px]:translate-x-60  max-[320px]:-translate-y-20 max-[320px]:text-md min-[321px]:translate-x-72 min-[360px]:translate-y-[-4.0rem]]">
+        <p className="font-bold translate-x-80 -translate-y-24  text-slate-100  max-[320px]:translate-x-60  max-[320px]:-translate-y-20 max-[320px]:text-md min-[360px]:translate-x-[17.5rem] min-[360px]:-translate-y-[5.4rem]">
           {save ? cvc : "XXX"}
         </p>
       </div>
@@ -30,14 +30,14 @@ const CreditCard = ({
           alt="Front of a credit card"
           className="w-3/4 -translate-y-20 translate-x-5 max-[320px]:-translate-y-16 max-[320px]:translate-x-4"
         />
-        <div className="-translate-y-56 flex flex-col gap-8 max-[320px]:-translate-y-48 max-[320px]:gap-5">
+        <div className="-translate-y-56 flex flex-col gap-8 max-[320px]:-translate-y-48 max-[320px]:gap-5 max-[360px]:gap-7 max-[360px]:-translate-y-[13.5rem]">
           <img src={cardLogo} alt="" className="ml-10 w-14 max-[320px]:ml-7" />
-          <div className="flex flex-col translate-x-9 gap-4 max-[320px]:gap-3 max-[320px]:translate-x-5">
+          <div className="flex flex-col translate-x-9 gap-4 max-[320px]:gap-3 max-[320px]:translate-x-5 max-[360px]:translate-x-6">
             <p className=" ml-3 text-slate-100 font-bold text-xl tracking-wider max-[320px]:text-[1.1rem]">
               {save ? number : "XXXX XXXX XXXX XXXX"}{" "}
             </p>
 
-            <p className="flex flex-row uppercase tracking-wider gap-28 text-slate-200 ml-2 text-[0.8rem] font-semibold max-[320px]:gap-20 max-[320px]:text-[.7rem] max-[320px]:ml-4">
+            <p className="flex flex-row uppercase tracking-wider gap-28 text-slate-200 ml-2 text-[0.8rem] font-semibold max-[320px]:gap-20 max-[320px]:text-[.7rem] max-[320px]:ml-4 max-[360px]:gap-24">
               <span>{save ? name : "Felicia Leire"}</span>{" "}
               <span>
                 {save ? month : "XX"}/{save ? year : "XX"}

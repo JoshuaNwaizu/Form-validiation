@@ -25,7 +25,7 @@ function App() {
     } else if (regex.test(name)) {
       setValidiationMessage("CARDHOLDER NAME - Wrong format, letters only!");
       setSave(false);
-      toast.error("CARD NAME - Wrong format, letters only!", {
+      toast.error("CardHolder - Wrong format, letters only!", {
         position: "top-right",
       });
       return;
