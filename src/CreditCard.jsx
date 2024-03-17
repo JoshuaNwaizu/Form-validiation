@@ -10,9 +10,9 @@ const CreditCard = ({ name, number, save, year, month, cvc }) => {
         <img
           src={cardBackground}
           alt="The back of a credit card"
-          className="w-3/4 h-2/4 pt-9 translate-x-20 max-[320px]:translate-x-16"
+          className="w-3/4 h-2/4 pt-9 translate-x-20 max-[320px]:translate-x-16 max-[414px]:translate-y-2"
         />
-        <p className="font-bold translate-x-80 -translate-y-24  text-slate-100  max-[320px]:translate-x-60  max-[320px]:-translate-y-20 max-[320px]:text-md min-[360px]:translate-x-[17.5rem] min-[360px]:-translate-y-[5.4rem] max-[414px]:-translate-y-24">
+        <p className="font-bold translate-x-80 -translate-y-24  text-slate-100  max-[320px]:translate-x-60  max-[320px]:-translate-y-20 max-[320px]:text-md min-[360px]:translate-x-[17.6rem] min-[360px]:-translate-y-[5.4rem] min-[412px]:translate-x-[20rem] ">
           {save ? cvc : "XXX"}
         </p>
       </div>
