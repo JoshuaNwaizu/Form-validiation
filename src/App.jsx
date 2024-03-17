@@ -13,17 +13,14 @@ function App() {
   const [year, setYear] = useState("");
   const [save, setSave] = useState(false);
   const [cvc, setCvc] = useState("");
-  const [validiationMessage, setValidiationMessage] = useState("");
 
   const handleSave = () => {
     const regex = /\d/;
     if (name.trim() === "") {
-      setValidiationMessage("Please fill all Inputs!");
       setSave(false);
       toast.error("Input field is empty!", { position: "top-right" });
       return;
     } else if (regex.test(name)) {
-      setValidiationMessage("CARDHOLDER NAME - Wrong format, letters only!");
       setSave(false);
       toast.error("CardHolder - Wrong format, letters only!", {
         position: "top-right",
@@ -93,7 +90,6 @@ function App() {
           month={month}
           save={save}
           cvc={cvc}
-          validiationMessage={validiationMessage}
         />
 
         {save ? (
@@ -111,7 +107,6 @@ function App() {
             month={month}
             cvc={cvc}
             handleCvc={handleChangeCvc}
-            validiationMessage={validiationMessage}
           />
         )}
       </main>
