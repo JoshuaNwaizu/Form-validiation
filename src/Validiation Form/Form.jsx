@@ -20,7 +20,7 @@ const Form = ({
   validiationMessage,
 }) => {
   return (
-    <div className="mt-24 ml-7 flex flex-col gap-6 mr-7 max-[320px]:mt-20">
+    <div className="mt-24 ml-7 flex flex-col gap-6 mr-7 max-[320px]:mt-20 min-[768px]:flex  min-[820px]:justify-center min-[820px]:-mt-30">
       <Inputs
         label="Cardholder name"
         placeholder="e.g. Felicia Leire"

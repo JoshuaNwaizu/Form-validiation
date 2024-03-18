@@ -82,7 +82,7 @@ function App() {
 
   return (
     <>
-      <main className="h-screen overflow-x-hidden">
+      <main className="h-screen overflow-x-hidden min-[820px]:flex ">
         <CreditCard
           name={name}
           number={number}
