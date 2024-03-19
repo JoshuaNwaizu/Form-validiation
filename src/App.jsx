@@ -22,7 +22,7 @@ function App() {
       return;
     } else if (regex.test(name)) {
       setSave(false);
-      toast.error("CardHolder - Wrong format, letters only!", {
+      toast.error("Cardholder - Wrong format, letters only!", {
         position: "top-right",
       });
       return;
@@ -31,7 +31,7 @@ function App() {
       setSave(false);
       toast.error("Card Number is empty", { position: "top-right" });
       return;
-    } else if (number.trim().length < 17) {
+    } else if (number.trim().length < 19) {
       setSave(false);
       toast.error("Card Number is not complete", { position: "top-right" });
       return;
@@ -82,7 +82,7 @@ function App() {
 
   return (
     <>
-      <main className="h-screen overflow-x-hidden min-[820px]:flex ">
+      <main className="h-screen overflow-x-hidden min-[1114px]:flex ">
         <CreditCard
           name={name}
           number={number}
