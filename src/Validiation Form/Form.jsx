@@ -20,7 +20,7 @@ const Form = ({
   validiationMessage,
 }) => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center min-[1280px]:-mt-36 min-[1280px]:w-[45%]  min-[1280px]:mx-auto">
       <div className="mt-24 ml-7 flex flex-col gap-6 mr-7 max-[320px]:mt-20 min-[768px]:flex min-[820px]:justify-center min-[820px]:-mt-30 min-[768px]:mt-48 min-[768px]:w-2/3 min-[768px]:justify-center">
         <Inputs
           label="Cardholder name"
