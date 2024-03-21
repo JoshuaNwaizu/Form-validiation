@@ -4,7 +4,7 @@ import Button from "./Validiation Form/Button";
 
 const Compliment = ({ onClick }) => {
   return (
-    <div className="flex flex-col gap-7 mt-32 max-[360px]:mt-20 min-[768px]:mt-44 min-[1280px]:mx-auto">
+    <div className="flex flex-col gap-7 mt-32 max-[360px]:mt-20 min-[360px]:mt-28 min-[768px]:mt-44 min-[1280px]:mx-auto">
       <div className="flex flex-col items-center gap-8 ">
         <img src={iconComplete} alt="check" />
         <div className="flex flex-col items-center gap-3">

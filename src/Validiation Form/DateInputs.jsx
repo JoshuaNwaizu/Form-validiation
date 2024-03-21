@@ -27,6 +27,7 @@ const DateInputs = ({
             className={classes}
             onChange={handleMonth}
           />
+
           <input
             type="text"
             placeholder="YY"

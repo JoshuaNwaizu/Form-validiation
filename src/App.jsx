@@ -36,13 +36,30 @@ function App() {
       toast.error("Card Number is not complete", { position: "top-right" });
       return;
     }
-    if (month.trim() === "" || year.trim() === "" || cvc.trim() === "") {
+    if (month.trim() === "") {
+      setSave(false);
+      toast.error("Fill up the month input", { position: "top-right" });
+      return;
+    } else if (month.trim() > 12) {
+      setSave(false);
+      toast.error("Month value shouldn't be above 12", {
+        position: "top-right",
+      });
+      return;
+    }
+
+    if (
+      month.trim() === "" ||
+      month.trim() > 12 ||
+      year.trim() === "" ||
+      cvc.trim() === ""
+    ) {
       setSave(false);
       toast.error("Please fill all input", { position: "top-right" });
       return;
     } else {
       setSave(true);
-      const projectToast = `Your credentials added`;
+      const projectToast = `Your card details added`;
       toast.success(projectToast, { position: "top-right" });
     }
   };
