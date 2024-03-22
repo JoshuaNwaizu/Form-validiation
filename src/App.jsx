@@ -63,6 +63,11 @@ function App() {
       toast.success(projectToast, { position: "top-right" });
     }
   };
+  function handleResetPage() {
+    toast.error("Fill all Inputs", {
+      position: "top-right",
+    });
+  }
 
   const handleReset = () => {
     setSave(false);
@@ -72,6 +77,7 @@ function App() {
     setYear("");
     setMonth("");
     setNumber("");
+    handleResetPage();
   };
 
   const handleChangeName = (e) => {
