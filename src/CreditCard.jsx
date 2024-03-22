@@ -33,7 +33,7 @@ const CreditCard = ({ name, number, save, year, month, cvc }) => {
               {save ? number : "0000 0000 0000 0000"}
             </p>
             <p className="flex flex-row uppercase tracking-wider gap-28 text-slate-200 ml-2 text-[0.8rem] font-semibold max-[320px]:gap-20 max-[320px]:text-[.7rem] max-[320px]:ml-4 max-[360px]:gap-24 min-[768px]:gap-[15rem] min-[1280px]:gap-52 min-[1440px]:gap-48">
-              <span className=" w-[6.5rem] min-[768px]:text-sm tracking-widest min-[1280px]:w-[7rem]">
+              <span className=" w-[6.5rem] min-[768px]:text-sm tracking-widest min-[1280px]:w-[7.5rem]">
                 {save ? name : "Felicia Leire"}
               </span>
               <span>
